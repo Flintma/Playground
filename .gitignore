@@ -8,4 +8,5 @@ env.bak/
 venv.bak/
 my_checkpoint.pth
 dataset
-
+runs
+__pycache__

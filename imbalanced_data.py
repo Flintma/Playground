@@ -31,12 +31,12 @@ def get_loader(root_dir, batch_size):
         
     # class_weights = [1,50]
     
-    sample_weight = [0] * len(dataset)
+    sample_weights = [0] * len(dataset)
     for idx, (data, label) in enumerate(dataset):
         class_weight = class_weights[label]
         sample_weights[idx] = class_weight
 
-    sampler = WeightedRandomSampler(sample_weights, num_samples = len(sample_weight), replacement = True) # sample with replacement
+    sampler = WeightedRandomSampler(sample_weights, num_samples = len(sample_weights), replacement = True) # sample with replacement
 
     loader = DataLoader(dataset, batch_size=batch_size, sampler = sampler)
     return loader
