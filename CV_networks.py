@@ -7,6 +7,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader # Give easier dataset management and creates mini batches
 import torchvision.datasets as datasets # Has standard datasets we can import in a nice way
 import torchvision.transforms as transforms 
+from math import ceil
 ########################################################LeNet architecture##################################################
 # 1*32*32 Input -> (5*5), s=1,p=1 -> avg pool s=2,p=0 -> (5*5),s=1,p=1 -> avg pool s=2,p=0
 # -> Conv 5*5 to 120 channels -> Linear 120 -> Linear 84 -> Linear 10
